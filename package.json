@@ -1,0 +1,8 @@
+{
+  "name": "Router",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "uglify-js": "^3.4.9"
+  }
+}

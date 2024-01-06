@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <a href="#/kdjd">#/kdjd</a>
+            <a href="#/aaa">#/aaa</a>
+            <a href="#/ab">#/ab</a>
+            <a href="#/ad">#/ad</a>
+            <a href="#/bd">#/bd</a>
+        </div>
+
+        <div>
+            <a href="/fff">/fff</a>
+            <a href="/ab">/ab</a>
+            <a href="/bd">/bd</a>
+            <a href="/aaa">/aaa</a>
+            <a href="/sddj">/sddj</a>
+            <a href="/rr/test/index.html">index</a>
+        </div>
+    </div>
+</div>
+<script src="../src/index.js"></script>
+<script>
+    var router = new Router({
+        debug: true
+    });
+    router.use('/aaa', function () {
+        console.log('aaa')
+    });
+    router.use(/d/, function () {
+        console.log('dd')
+    });
+    router.use(/^\/a/, function () {
+        console.log('a no hash start')
+    });
+    router.use(/^\/b/, function () {
+        console.log('b no hash start')
+    });
+
+    router.start();
+    router.attach(document.querySelector('#id'));
+    router.destroy();
+</script>
+</body>
+</html>
